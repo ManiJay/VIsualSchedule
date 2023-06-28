@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Schedule App</title>
+    <link rel="stylesheet" type="text/css" href="visuals.css">
+</head>
+<body>
+    <div class="content">
+      <div class="container" id="schedulePage">
+          <h1>Daily Schedule</h1>
+          <button id="addScheduleBtn">Add Schedule</button>
+          <div id="schedule"></div>
+      </div>
+      
+
+        <div class="container" id="profilePage" style="display: none;">
+            <h1>Profile</h1>
+            <div id="profileContent">
+                <h3>Name: <span id="profileName"></span></h3>
+                <p>Age: <span id="profileAge"></span></p>
+                <p>Interests: <span id="profileInterests"></span></p>
+            </div>
+            <button id="editProfileBtn">Edit Profile</button>
+            <div id="profileModal" class="modal">
+                <div class="modal-content">
+                    <!-- <span class="close">&times;</span> -->
+                    <button id="closeBtn" class="close">&times;</button>
+                    <h2>Edit Profile</h2>
+                    <form id="profileForm">
+                        <label for="nameInput">Name:</label>
+                        <input type="text" id="nameInput" name="name">
+
+                        <label for="ageInput">Age:</label>
+                        <input type="number" id="ageInput" name="age">
+
+                        <label for="interestsInput">Interests:</label>
+                        <textarea id="interestsInput" name="interests"></textarea>
+
+                        <input type="submit" value="Save">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="activitiesPage" style="display: none;">
+            <h1>Activities</h1>
+            <div class="activities">
+                <div class="activity">
+                    <img src="reading.jpg" alt="Reading">
+                    <span>Reading a book</span>
+                </div>
+                <div class="activity">
+                    <img src="drawing.jpg" alt="Drawing">
+                    <span>Drawing or painting</span>
+                </div>
+                <div class="activity">
+                    <img src="music.jpg" alt="Listening to Music">
+                    <span>Listening to music</span>
+                </div>
+                <div class="activity">
+                    <img src="instrument.jpg" alt="Playing an Instrument">
+                    <span>Playing a musical instrument</span>
+                </div>
+                <div class="activity">
+                    <img src="sensory_play.png" alt="Sensory Play">
+                    <span>Engaging in sensory play</span>
+                </div>
+                <div class="activity">
+                    <img src="exercise.png" alt="Physical Exercises">
+                    <span>Engaging in physical exercises</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="helpPage" style="display: none;">
+            <h1>Help</h1>
+            
+            <h2>Getting Started</h2>
+            <p>
+                Welcome to the Daily Schedule App! This guide will help you get started with using the app effectively.
+            </p>
+            <ul>
+                <li>
+                    <h3>How to Add a New Schedule</h3>
+                    <p>
+                        To add a new schedule, follow these steps:
+                    </p>
+                    <ol>
+                        <li>Navigate to the Daily Schedule page by clicking on the "Schedule" link in the sidebar.</li>
+                        <li>Click on the "Add Schedule" button at the top of the page.</li>
+                        <li>Fill in the necessary details, such as the schedule name, image, and audio.</li>
+                        <li>Click the "Save" button to add the new schedule to your daily routine.</li>
+                    </ol>
+                </li>
+                <li>
+                    <h3>How to Edit Your Profile</h3>
+                    <p>
+                        You can edit your profile information by following these steps:
+                    </p>
+                    <ol>
+                        <li>Click on the "Profile" link in the sidebar to navigate to your profile page.</li>
+                        <li>Click the "Edit Profile" button.</li>
+                        <li>In the modal that appears, update your profile details such as your name, age, and interests.</li>
+                        <li>Click the "Save" button to apply the changes.</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <h2>FAQs</h2>
+            <ul>
+                <li>
+                    <h3>Q: How can I delete a schedule?</h3>
+                    <p>
+                        A: To delete a schedule, follow these steps:
+                    </p>
+                    <ol>
+                        <li>Navigate to the Daily Schedule page by clicking on the "Schedule" link in the sidebar.</li>
+                        <li>Find the schedule you want to delete and click on the "Delete" button next to it.</li>
+                        <li>Confirm the deletion in the prompt that appears.</li>
+                        <li>The schedule will be removed from your daily routine.</li>
+                    </ol>
+                </li>
+                <li>
+                    <h3>Q: How can I customize the sensory elements?</h3>
+                    <p>
+                        A: To customize the sensory elements, follow these steps:
+                    </p>
+                    <ol>
+                        <li>Click on the "Settings" link in the sidebar to navigate to the settings page.</li>
+                        <li>Adjust the settings for sound effects, animations, and flashing lights based on your preferences.</li>
+                        <li>Your changes will be applied immediately.</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <h2>Tutorials</h2>
+            <ul>
+                <li>
+                    <h3>Tutorial 1: Managing Your Profile</h3>
+                    <p>
+                        This tutorial will guide you through the process of managing your profile information. Learn how to edit your profile, update your interests, and more.
+                    </p>
+                </li>
+                <li>
+                    <h3>Tutorial 2: Adding and Deleting Schedules</h3>
+                    <p>
+                        In this tutorial, you will learn how to add new schedules to your daily routine and delete unwanted schedules.
+                    </p>
+                </li>
+            </ul>
+
+            <h2>Revision History</h2>
+            <p>If you need assistance or have any questions, please reach out to our support team at support@example.com.</p>
+            
+          </div>
+          <div id="settingsPage" class="container" style="display: none;">
+            <h1>Settings</h1>
+            <h2>Sound Effects</h2>
+            <label>
+                <input type="checkbox" id="sound-effects-toggle">
+                Enable sound effects
+            </label>
+
+            <h2>Animations</h2>
+            <label>
+                <input type="checkbox" id="animations-toggle">
+                Enable animations
+            </label>
+
+            <h2>Flashing Lights</h2>
+            <label>
+                <input type="checkbox" id="flashing-lights-toggle">
+                Enable flashing lights
+            </label>
+        </div>
+    </div>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" id="scheduleLink">Schedule</a></li>
+            <li><a href="#" id="profileLink">Profile</a></li>
+            <li><a href="#" id="activitiesLink">Activities</a></li>
+            <li><a href="#" id="settingsLink">Settings</a></li>
+            <li><a href="#" id="helpLink">Help</a></li>
+        </ul>
+    </div>
+    <div class="addSchedule-page" id="addSchedulePage" style="display:none">
+        <h1>Your Schedule</h1>
+       
+        <div class="addSchedule-Content" id="addScheduleContent">
+        <label> Image</label>
+        <input type="image" id="scheduleImage"> <br>
+        <span> <input type="text" placeholder="name" id="scheduleName"></span>
+        <button id="scheduleSave">Save</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
